@@ -1,0 +1,277 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage { mathtools , amssymb , amsthm }
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Omer Junedi} \\ \vspace{1pt}
+    \small 248-880-3467 $|$ \href{mailto:ojunedi@umich.edu}{\underline{ojunedi@umich.edu}} $|$
+    \href{https://www.linkedin.com/in/omer-junedi/}{\underline{linkedin.com/in/omer-junedi/}} $|$
+    \href{https://github.com/ojunedi}{\underline{github.com/ojunedi}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Michigan}{Ann Arbor, MI}
+      {Bachelor of Science in Computer Science and Mathematics | GPA: 3.6}{Aug. 2022 -- May 2026}
+      % \resumeSubItem{{\emph{Math Coursework}: Multivariable Calculus, Linear Algebra, Real Analysis, Discrete Mathematics, Probability Theory}}
+    \resumeSubItem{{\emph{Coursework}: Data Structures and Algorithms, Web Systems, Machine Learning, Theory of Computation, Real Analysis, Probability Theory, Financial Math, Linear Algebra, Differential Equations, Graph Algorithms}}
+
+  \resumeSubHeadingListEnd
+
+
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Incoming Product Management Intern}{May 2025 -- Aug 2025}
+    {Harman International}{Novi, MI}
+        \resumeItemListStart
+        % \resumeItem{Leveraged VertexAI and LangChain to develop Kai, an AI powered tool for educators}
+        \resumeItem{Summer 2025 Connectivity Product Line}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Artificial Intelligence Intern}{May 2024 -- Aug 2024}
+    {Radical AI}{New York, NY}
+    \resumeItemListStart
+        % \resumeItem{Leveraged VertexAI and LangChain to develop Kai, an AI powered tool for educators}
+        \resumeItem{Created an AI-powered teaching assistant using VertexAI, LangChain, ChromaDB, and FastAPI, enabling automatic quiz generation from uploaded course materials}
+        \resumeItem{Supported multiple file types and tailored output for various grade levels, enhancing usability for educators}
+    \resumeItemListEnd
+
+
+
+      \resumeSubheading
+      {Research Assistant}{Oct 2023 - Dec 2024}
+{{\underline{\href{http://www.socr.umich.edu/}{University of Michigan - Statistical Online Computational Resource}}}}
+      % {{\textbf{\href{https://www.socr.umich.edu/}}{University of Michigan - Statistical Online Computational Resource}}}
+      {Ann Arbor, MI}
+      \resumeItemListStart
+        \resumeItem{Built a real-time synthetic data generator for structured Clinical/PHI data using python-sdv, enabling compliant and privacy-preserving dataset sharing}
+        \resumeItem{Conducted trade-off analysis between privacy protection and data utility to guide optimal parameter selection}
+      \resumeItemListEnd
+
+    %   \resumeSubheading
+    %   {Mathematics and Computer Science Tutor}{May 2023 -- Present}
+    %   {University of Michigan - Engineering Center for Academic Success}{Ann Arbor, MI}
+    %   \resumeItemListStart
+    %             \resumeItem{Tutored students in one-on-one and group settings for various classes including, Discrete Mathematics, Data Structures and Algorithm, Calculus I-III, Linear Algebra, Theory of Computation, and Real Analysis}
+
+    % \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Analytics Intern}{May 2022 -- December 2022}
+      {Coalition of Americans for Pluralism}{Farmington Hills, MI}
+      \resumeItemListStart
+        \resumeItem{Conducted web scraping to gather and analyze public data on voter demographics, political affiliation, and other relevant factors, resulting in the identification of target swing cities for local government elections}
+        % \resumeItem{Developed a custom sentiment analysis program using natural language processing techniques to identify hate speech and other problematic language used by nonprofit organizations, resulting in improved monitoring and oversight of these organizations}
+      \resumeItemListEnd
+
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+
+
+    \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
+    %   {Southwestern University}{Georgetown, TX}
+    %   \resumeItemListStart
+    %     \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
+    %     \resumeItem{Developed a game in Java to test the generated dungeons}
+    %     \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
+    %     \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
+    %     \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
+    %     \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
+    %   \resumeItemListEnd
+
+
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\textbf{Leetcode Reminder Extension} $|$ \emph{React.js, Django, PostgreSQL, AWS RDS}}
+        {}
+        \resumeItemListStart
+            \resumeItem{Developed and published a Chrome extension that recommends algorithm problems using spaced repetition based on users’ performance and memory retention curve}
+            \resumeItem{Improved study efficiency and engagement through a smart reminder system integrating backend analytics with frontend interactivity}
+        \resumeItemListEnd
+%         \resumeProjectHeading
+%           {\textbf{Machine Learning Forum Post Classifier} $|$ \emph{C++}}{February 2023}
+%           \resumeItemListStart
+%             \resumeItem{Developed a machine learning classifier using the bag of words model to automatically identify
+% the subject of forum posts, resulting in a 85\% accuracy rate in identifying the correct category for each
+% post}
+%             \resumeItem{Utilized natural language processing techniques to preprocess and vectorize text data, enabling efficient
+% and accurate classification}
+%           \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Mobile Game Data Analytics Tool} $|$ \emph{Python, Matplotlib, Pandas}}{}
+          \resumeItemListStart
+            \resumeItem{Built a personal performance dashboard, offering players tailored improvement suggestions based on match history}
+            \resumeItem{Designed visual reports with Matplotlib that helped users increase win rates by an average of 10\% }
+          \resumeItemListEnd
+        \resumeProjectHeading
+          {{\underline{\textbf{\href{https://github.com/ojunedi/miniraytracer}{Mini Raytracer}}} $|$ \emph{C++}}}{}
+          \resumeItemListStart
+            \resumeItem{Implemented a raytracing engine from scratch, simulating realistic lighting effects (reflection, refraction, shadows) for high-quality image rendering}
+            % \resumeItem{Implemented advanced shading algorithms, such as Phong and Blinn-Phong, to accurately model surface properties and achieve visually stunning effects like specular highlights, smooth shading, and realistic material interactions in the rendered images}
+      \resumeItemListEnd
+
+      \resumeProjectHeading
+      {{\underline{\textbf{Instagram Clone}} $|$ \emph{React, Python, HTML}}}{}
+    %       {\underline{ojunedi@umich.edu}} $|$
+    % \href{https://www.linkedin.com/in/omer-junedi/}
+        \resumeItemListStart
+            \resumeItem{Built an Instagram clone using client-side dynamic pages and a REST API}
+            \resumeItem{Constructed a full-stack web app similar to Instagram to enable users to create posts, comments, and personalized profiles using Flask and React frameworks}
+            \resumeItem{Developed the front-end interface using HTML, CSS, and JavaScript (React framework)}
+        \resumeItemListEnd
+        %   {\underline{\textbf{\href{https://github.com/ojunedi/f1wordle}{F1Wordle}}} $|$ \emph{React, TypeScript, HTML, CSS}}{June 2023}
+        % \resumeItemListStart
+        %     \resumeItem{Developed Formula 1 Themed wordle clone using ReactJS}
+        % \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{:Python, C/C++, JavaScript, HTML/CSS, R} \\
+     \textbf{Frameworks}{: React, Node.js, Flask} \\
+     \textbf{Developer Tools}{: Git, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
+     \textbf{Libraries}{: Pandas, NumPy, Matplotlib, PyTorch, TensorFlow, SKLearn}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
