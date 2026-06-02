@@ -3,28 +3,28 @@ import FadeIn from '../components/shared/FadeIn'
 const services = [
   {
     num: '01',
-    name: '3D Modeling',
-    desc: 'Creation of detailed objects, characters, or environments tailored to specific client needs, ideal for games, products, and visualizations.',
+    name: 'AI & Machine Learning',
+    desc: 'Building intelligent systems with PyTorch, TensorFlow, and LangChain — from AI-powered teaching assistants to production ML pipelines.',
   },
   {
     num: '02',
-    name: 'Rendering',
-    desc: 'High-quality, photorealistic renders that showcase designs with custom lighting, textures, and materials to bring concepts to life.',
+    name: 'Full-Stack Development',
+    desc: 'End-to-end web applications using React, Django, Node.js, and cloud infrastructure including AWS RDS and PostgreSQL.',
   },
   {
     num: '03',
-    name: 'Motion Design',
-    desc: 'Dynamic animations and motion graphics that add energy and storytelling to brands, products, and digital experiences.',
+    name: 'Data Science',
+    desc: 'Statistical analysis, synthetic data generation, and privacy-utility trade-off research using Python, Pandas, NumPy, and Matplotlib.',
   },
   {
     num: '04',
-    name: 'Branding',
-    desc: 'Crafting cohesive visual identities — from logos to full brand systems — that communicate a clear and memorable presence.',
+    name: 'Systems Programming',
+    desc: 'Low-level C/C++ development — including a raytracing engine built from scratch simulating reflection, refraction, and shadows.',
   },
   {
     num: '05',
-    name: 'Web Design',
-    desc: 'Designing clean, modern, and conversion-focused websites with attention to layout, typography, and user experience.',
+    name: 'Research',
+    desc: 'Applied research at UMich SOCR on clinical data privacy, synthetic PHI generation, and parameter optimization for real-world datasets.',
   },
 ]
 
@@ -39,7 +39,7 @@ export default function ServicesSection() {
         className="font-black uppercase text-center mb-16 sm:mb-20 md:mb-28"
         style={{ fontSize: 'clamp(3rem, 12vw, 160px)', color: '#0C0C0C' }}
       >
-        Services
+        Skills
       </h2>
       <div className="max-w-5xl mx-auto w-full">
         {services.map((service, i) => (

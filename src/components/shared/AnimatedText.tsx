@@ -16,12 +16,12 @@ interface CharProps {
 
 function AnimatedChar({ char, scrollYProgress, start, end }: CharProps) {
   const opacity = useTransform(scrollYProgress, [start, end], [0.2, 1])
-  const display = char === ' ' ? '\u00A0' : char
+  if (char === ' ') return <span> </span>
   return (
     <span style={{ position: 'relative', display: 'inline' }}>
-      <span style={{ opacity: 0 }}>{display}</span>
+      <span style={{ opacity: 0 }}>{char}</span>
       <motion.span style={{ opacity, position: 'absolute', left: 0, top: 0 }}>
-        {display}
+        {char}
       </motion.span>
     </span>
   )

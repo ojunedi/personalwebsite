@@ -7,6 +7,7 @@ interface Project {
   num: string
   category: string
   name: string
+  link: string
   col1img1: string
   col1img2: string
   col2img: string
@@ -15,36 +16,30 @@ interface Project {
 const projects: Project[] = [
   {
     num: '01',
-    category: 'Client',
-    name: 'Nextlevel Studio',
-    col1img1:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85',
-    col1img2:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8.png&w=1280&q=85',
-    col2img:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055451_e317bf2d-28d4-48cc-86b0-6f72f25b6327.png&w=1280&q=85',
+    category: 'Chrome Extension',
+    name: 'Leetcode Reminder',
+    link: 'https://github.com/ojunedi',
+    col1img1: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80',
+    col1img2: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80',
+    col2img: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800&q=80',
   },
   {
     num: '02',
-    category: 'Personal',
-    name: 'Aura Brand Identity',
-    col1img1:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f.png&w=1280&q=85',
-    col1img2:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055723_5ceda0b8-d9c2-4665-b2e3-83ba19ba76d1.png&w=1280&q=85',
-    col2img:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055753_adc5dcbd-a8e6-49c0-b43a-9b030d835cea.png&w=1280&q=85',
+    category: 'Data Science',
+    name: 'Game Analytics Tool',
+    link: 'https://github.com/ojunedi',
+    col1img1: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    col1img2: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80',
+    col2img: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80',
   },
   {
     num: '03',
-    category: 'Client',
-    name: 'Solaris Digital',
-    col1img1:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f.png&w=1280&q=85',
-    col1img2:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_060108_438f781a-9846-4dcc-89ab-c4e6cb830f5b.png&w=1280&q=85',
-    col2img:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055818_9d062121-ad7e-46b9-999a-1a6a692ef1ee.png&w=1280&q=85',
+    category: 'Systems / C++',
+    name: 'Mini Raytracer',
+    link: 'https://github.com/ojunedi/miniraytracer',
+    col1img1: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80',
+    col1img2: 'https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=800&q=80',
+    col2img: 'https://images.unsplash.com/photo-1608303588026-884930af2559?w=800&q=80',
   },
 ]
 
@@ -91,7 +86,9 @@ function ProjectCard({ project, index }: ProjectCardProps) {
               {project.name}
             </span>
           </div>
-          <LiveProjectButton />
+          <a href={project.link} target="_blank" rel="noopener noreferrer">
+            <LiveProjectButton />
+          </a>
         </div>
 
         <div className="flex gap-4">

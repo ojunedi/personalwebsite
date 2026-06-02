@@ -44,8 +44,8 @@ export default function AboutSection() {
       style={{ background: '#0C0C0C' }}
     >
       {cornerImages.map(({ src, className, delay, x }) => (
-        <FadeIn key={src} delay={delay} x={x} y={0} duration={0.9}>
-          <img className={className} src={src} alt="" />
+        <FadeIn key={src} delay={delay} x={x} y={0} duration={0.9} className={className}>
+          <img src={src} alt="" className="w-full h-full object-contain" />
         </FadeIn>
       ))}
 
@@ -60,8 +60,8 @@ export default function AboutSection() {
             </h2>
           </FadeIn>
           <AnimatedText
-            text="With more than five years of experience in design, i focus on branding, web design, and user experience, i truly enjoy working with businesses that aim to stand out and present their best image. Let's build something incredible together!"
-            className="font-medium text-center leading-relaxed max-w-[560px] text-[#D7E2EA]"
+            text="I'm a Computer Science and Mathematics student at the University of Michigan with a deep curiosity for where theory meets practice. I've built AI-powered tools, synthetic data systems, and shipped production software across ML, full-stack, and systems domains. I'm driven by hard problems and clean solutions."
+            className="font-medium text-center leading-relaxed w-full max-w-[560px] text-[#D7E2EA]"
             style={{ fontSize: 'clamp(1rem, 2vw, 1.35rem)' }}
           />
         </div>
