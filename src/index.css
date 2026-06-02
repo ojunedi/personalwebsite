@@ -2,20 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-*, *::before, *::after {
+:root {
+  --paper: #ffffff;
+  --ink: #0a0a0a;
+  --ink-soft: #555555;
+  --ink-mute: #999999;
+  --rule: #e5e5e5;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body, #root {
-  background-color: #0C0C0C;
-  font-family: 'Kanit', sans-serif;
+html,
+body,
+#root {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: 'Newsreader', Georgia, serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-.hero-heading {
-  background: linear-gradient(180deg, #646973 0%, #BBCCD7 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.font-mono-ui {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-feature-settings: 'ss01', 'ss02';
+}
+
+.serif-italic {
+  font-style: italic;
+}
+
+.rule {
+  border-color: var(--rule);
+}
+
+.text-ink {
+  color: var(--ink);
+}
+.text-ink-soft {
+  color: var(--ink-soft);
+}
+.text-ink-mute {
+  color: var(--ink-mute);
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.blink {
+  animation: blink 1.1s steps(1) infinite;
+}
+
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.link-underline:hover {
+  background-size: 100% 1px;
+}
+
+.link-static-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.link-static-underline:hover {
+  background-size: 0% 1px;
+  background-position: 100% 100%;
 }

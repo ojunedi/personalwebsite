@@ -1,126 +1,98 @@
 import FadeIn from '../components/shared/FadeIn'
 
-const experiences = [
+interface Experience {
+  year: string
+  company: string
+  role: string
+  location: string
+  note?: string
+}
+
+const experiences: Experience[] = [
   {
+    year: '2026 →',
     company: 'Accenture',
     role: 'Incoming Forward Deployed Engineer',
-    date: 'May 2026 – Present',
     location: 'Chicago, IL',
-    bullets: [],
+    note: 'Embedded with clients to ship AI systems where they actually live.',
   },
   {
+    year: '2025',
     company: 'Cisco',
     role: 'Software Engineering Intern',
-    date: 'Jun 2025 – Aug 2025',
     location: 'Research Triangle Park, NC',
-    bullets: [
-      'Commerce Engineering — Agentic AI in Cash Flow Applications.',
-    ],
+    note: 'Commerce Engineering — agentic AI for cash flow applications.',
   },
   {
+    year: '2024',
     company: 'Radical AI',
     role: 'Artificial Intelligence Intern',
-    date: 'May 2024 – Aug 2024',
     location: 'New York, NY',
-    bullets: [
-      'Built an AI-powered teaching assistant using VertexAI, LangChain, ChromaDB, and FastAPI, enabling automatic quiz generation from uploaded course materials.',
-      'Supported multiple file types and tailored output for various grade levels, enhancing usability for educators.',
-    ],
+    note: 'Built an AI teaching assistant with VertexAI, LangChain, ChromaDB and FastAPI.',
   },
   {
-    company: 'Statistical Online Computationl Resource',
+    year: '2023–24',
+    company: 'University of Michigan — SOCR',
     role: 'Research Assistant',
-    date: 'Oct 2023 – Dec 2024',
     location: 'Ann Arbor, MI',
-    bullets: [
-      'Built a real-time synthetic data generator for structured Clinical/PHI data using python-sdv, enabling compliant and privacy-preserving dataset sharing.',
-      'Conducted trade-off analysis between privacy protection and data utility to guide optimal parameter selection.',
-    ],
+    note: 'Privacy-preserving synthetic data generation for clinical / PHI datasets.',
   },
 ]
 
 export default function ExperienceSection() {
   return (
-    <section
-      id="experience"
-      className="rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32"
-      style={{ background: '#FFFFFF' }}
-    >
-      <FadeIn y={40}>
-        <h2
-          className="font-black uppercase text-center mb-16 sm:mb-20 md:mb-28"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)', color: '#0C0C0C' }}
+    <section id="work" className="max-w-[860px] mx-auto py-20 md:py-28 border-t rule">
+      <FadeIn y={20}>
+        <p
+          className="font-mono-ui uppercase tracking-[0.22em] text-ink-mute mb-12 md:mb-16"
+          style={{ fontSize: '11px' }}
         >
-          Experience
-        </h2>
+          §2 — Work, in order
+        </p>
       </FadeIn>
 
-      <div className="max-w-5xl mx-auto w-full flex flex-col">
+      <ol className="flex flex-col">
         {experiences.map((exp, i) => (
-          <FadeIn key={exp.company} delay={i * 0.12} y={30}>
-            <div
-              className="py-8 sm:py-10 md:py-12 flex flex-col sm:flex-row sm:gap-10 md:gap-16"
-              style={{ borderTop: '1px solid rgba(12,12,12,0.15)' }}
-            >
-              {/* Left: date + location */}
-              <div className="mb-3 sm:mb-0 sm:w-[200px] md:w-[240px] flex-shrink-0 flex flex-col gap-1.5">
+          <FadeIn key={exp.company} delay={i * 0.08} y={18}>
+            <li className="group grid grid-cols-12 gap-x-6 md:gap-x-10 py-8 md:py-10 border-t rule">
+              <div className="col-span-12 md:col-span-3">
                 <span
-                  className="font-light uppercase tracking-widest"
-                  style={{ fontSize: 'clamp(0.75rem, 1.2vw, 0.95rem)', color: 'rgba(12,12,12,0.45)' }}
+                  className="font-mono-ui uppercase tracking-[0.18em] text-ink-mute group-hover:text-ink transition-colors"
+                  style={{ fontSize: '11.5px' }}
                 >
-                  {exp.date}
+                  {exp.year}
                 </span>
-                <span
-                  className="font-light uppercase tracking-widest"
-                  style={{ fontSize: 'clamp(0.7rem, 1.1vw, 0.85rem)', color: 'rgba(12,12,12,0.35)' }}
+              </div>
+              <div className="col-span-12 md:col-span-9 mt-2 md:mt-0">
+                <h3
+                  className="font-serif leading-[1.1] tracking-[-0.01em] text-ink"
+                  style={{ fontSize: 'clamp(1.5rem, 2.6vw, 2rem)' }}
+                >
+                  <span className="font-light">{exp.company}</span>{' '}
+                  <span className="serif-italic font-light text-ink-soft">
+                    — {exp.role}
+                  </span>
+                </h3>
+                <p
+                  className="mt-2 font-mono-ui uppercase tracking-[0.18em] text-ink-mute"
+                  style={{ fontSize: '11px' }}
                 >
                   {exp.location}
-                </span>
+                </p>
+                {exp.note && (
+                  <p
+                    className="mt-4 font-serif text-ink-soft leading-[1.55] max-w-[540px]"
+                    style={{ fontSize: 'clamp(1rem, 1.3vw, 1.075rem)' }}
+                  >
+                    {exp.note}
+                  </p>
+                )}
               </div>
-
-              {/* Right: content */}
-              <div className="flex flex-col gap-3 flex-1">
-                <span
-                  className="font-black uppercase leading-none"
-                  style={{ fontSize: 'clamp(1.4rem, 3vw, 2.8rem)', color: '#0C0C0C' }}
-                >
-                  {exp.company}
-                </span>
-                <span
-                  className="font-medium uppercase tracking-wider"
-                  style={{ fontSize: 'clamp(0.8rem, 1.5vw, 1.1rem)', color: 'rgba(12,12,12,0.5)' }}
-                >
-                  {exp.role}
-                </span>
-                <ul className="flex flex-col gap-2 mt-1">
-                  {exp.bullets.map((b) => (
-                    <li
-                      key={b}
-                      className="font-light leading-relaxed flex gap-3"
-                      style={{ fontSize: 'clamp(0.85rem, 1.4vw, 1.1rem)', color: 'rgba(12,12,12,0.65)' }}
-                    >
-                      <span
-                        aria-hidden
-                        className="flex-shrink-0 rounded-full"
-                        style={{
-                          width: '0.4em',
-                          height: '0.4em',
-                          backgroundColor: '#0C0C0C',
-                          marginTop: '0.65em',
-                        }}
-                      />
-                      <span className="flex-1">{b}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            </li>
           </FadeIn>
         ))}
-
-        {/* bottom border */}
-        <div style={{ borderTop: '1px solid rgba(12,12,12,0.15)' }} />
-      </div>
+      </ol>
+      <div className="border-t rule" />
     </section>
   )
 }
