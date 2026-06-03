@@ -1,9 +1,8 @@
 import FadeIn from '../components/shared/FadeIn'
 
 const NOW = [
-  { label: 'Role', value: 'CS & Math, University of Michigan' },
-  { label: 'Next', value: 'Forward Deployed Engineer at Accenture' },
-  { label: 'Based', value: 'Ann Arbor → Chicago (May 2026)' },
+  { label: 'Role', value: 'Forward Deployed Engineer at Accenture' },
+  { label: 'Based', value: 'Chicago, IL' },
   { label: 'Building', value: 'Agentic systems, ML tooling, internal infra' },
   { label: 'Reading', value: 'The Master and His Emissary — McGilchrist' },
 ]
@@ -28,10 +27,8 @@ export default function AboutSection() {
               style={{ fontSize: 'clamp(1.6rem, 2.6vw, 2.15rem)' }}
             >
               I&apos;m drawn to{' '}
-              <span className="serif-italic">hard, useful problems</span> — the
-              kind where the right answer isn&apos;t a guess and the wrong one is
-              expensive. The closer the math sits to the keyboard, the more
-              interested I am.
+              <span className="serif-italic">hard</span> problems
+              sitting at the intersection of math and computer science
             </h2>
           </FadeIn>
 
@@ -41,9 +38,7 @@ export default function AboutSection() {
               style={{ fontSize: 'clamp(1.05rem, 1.4vw, 1.15rem)' }}
             >
               Over the last few years I&apos;ve shipped software across ML,
-              full-stack, and systems. I like clean abstractions, short feedback
-              loops, and writing things that hold up under load. I&apos;d rather
-              ship one careful thing than ten that are almost.
+              full-stack, and systems.
             </p>
           </FadeIn>
         </div>

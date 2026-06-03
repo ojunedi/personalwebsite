@@ -3,8 +3,8 @@ import FadeIn from '../components/shared/FadeIn'
 const LINKS = [
   { label: 'Email', href: 'mailto:ojunedi@umich.edu', value: 'ojunedi@umich.edu' },
   { label: 'GitHub', href: 'https://github.com/ojunedi', value: 'github.com/ojunedi' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/ojunedi', value: 'linkedin.com/in/ojunedi' },
-  { label: 'Twitter', href: 'https://x.com/ojunedi', value: 'x.com/ojunedi' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/omer-junedi', value: 'linkedin.com/in/omer-junedi' },
+  // { label: 'Twitter', href: 'https://x.com/ojunedi', value: 'x.com/ojunedi' },
 ]
 
 export default function SiteFooter() {

@@ -12,7 +12,7 @@ export default function IntroSection() {
             className="inline-block"
             style={{ width: 6, height: 6, borderRadius: 999, background: 'var(--ink)' }}
           />
-          Currently — Ann Arbor, Michigan
+          Currently — Chicago, IL
         </p>
       </FadeIn>
 
@@ -22,12 +22,13 @@ export default function IntroSection() {
           style={{ fontSize: 'clamp(2.5rem, 7.2vw, 5.4rem)' }}
         >
           <span className="serif-italic font-light">Omer Junedi</span>
-          <span className="block mt-2 text-ink-soft font-light">
+          {/* <span className="block mt-2 text-ink-soft font-light">
             engineer at the intersection of math,
           </span>
           <span className="block text-ink-soft font-light">
             machine learning, and software.
           </span>
+          */}
         </h1>
       </FadeIn>
 
@@ -36,10 +37,14 @@ export default function IntroSection() {
           className="mt-12 md:mt-16 max-w-[560px] font-serif text-ink-soft leading-[1.55]"
           style={{ fontSize: 'clamp(1.05rem, 1.45vw, 1.2rem)' }}
         >
+        I recently graduated from the university of michigan where I double majored in
+        mathematics and computer science
+        {/*
           I study Computer Science and Mathematics at the University of Michigan.
           I build AI tooling, synthetic data systems, and quiet little pieces of
           software that try to solve real problems carefully. This is a record of
           the work — and a place to be reached.
+        */}
         </p>
       </FadeIn>
 
@@ -65,7 +70,7 @@ export default function IntroSection() {
           </a>
           <span className="text-ink-mute">·</span>
           <a
-            href="https://linkedin.com/in/ojunedi"
+            href="https://linkedin.com/in/omer-junedi"
             target="_blank"
             rel="noreferrer"
             className="link-underline hover:text-ink transition-colors"

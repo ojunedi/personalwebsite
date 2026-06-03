@@ -32,8 +32,8 @@ const experiences: Experience[] = [
   },
   {
     year: '2023–24',
-    company: 'University of Michigan — SOCR',
-    role: 'Research Assistant',
+    company: 'SOCR Lab @ UMich',
+    role: 'ML Research Assistant',
     location: 'Ann Arbor, MI',
     note: 'Privacy-preserving synthetic data generation for clinical / PHI datasets.',
   },
