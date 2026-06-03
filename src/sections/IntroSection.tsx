@@ -22,13 +22,6 @@ export default function IntroSection() {
           style={{ fontSize: 'clamp(2.5rem, 7.2vw, 5.4rem)' }}
         >
           <span className="serif-italic font-light">Omer Junedi</span>
-          {/* <span className="block mt-2 text-ink-soft font-light">
-            engineer at the intersection of math,
-          </span>
-          <span className="block text-ink-soft font-light">
-            machine learning, and software.
-          </span>
-          */}
         </h1>
       </FadeIn>
 

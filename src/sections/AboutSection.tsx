@@ -44,6 +44,23 @@ export default function AboutSection() {
         </div>
 
         <div className="md:col-span-5 md:pt-2">
+          <FadeIn delay={0.2} y={16}>
+            <figure className="mb-8 md:mb-10">
+              <img
+                src="/headshot.jpg"
+                alt="Omer Junedi"
+                className="block w-[180px] h-[180px] object-cover grayscale"
+                style={{ border: '1px solid var(--rule)' }}
+              />
+              <figcaption
+                className="mt-2 font-mono-ui uppercase tracking-[0.18em] text-ink-mute"
+                style={{ fontSize: '10.5px' }}
+              >
+                Fig. 1 — The author
+              </figcaption>
+            </figure>
+          </FadeIn>
+
           <FadeIn delay={0.25} y={16}>
             <p
               className="font-mono-ui uppercase tracking-[0.22em] text-ink-mute mb-5"
