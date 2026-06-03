@@ -1,27 +1,18 @@
-# Omer Junedi - Personal Portfolio Website
+# omerjunedi.com
 
-This is my personal portfolio website showcasing my skills, projects, education, and work experience.
+Personal site. Minimal, editorial, set in Newsreader & JetBrains Mono.
 
-## Features
+## Stack
 
-- Responsive design
-- Interactive navigation
-- Project showcase
-- Skills section
-- Contact information
+React · TypeScript · Vite · Tailwind · Framer Motion
 
-## Technologies Used
+## Local
 
-- HTML5
-- CSS3
-- JavaScript
-- Font Awesome for icons
+```bash
+npm install
+npm run dev
+```
 
-## Setup
+## Reach
 
-1. Clone the repository
-2. Open `main.html` in your browser
-
-## Contact
-
-Feel free to reach out to me at ojunedi@umich.edu
+ojunedi@umich.edu
