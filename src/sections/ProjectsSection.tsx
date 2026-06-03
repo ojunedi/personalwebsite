@@ -12,20 +12,20 @@ interface Project {
 const projects: Project[] = [
   {
     index: '01',
-    title: 'Leetcode Reminder',
+    title: 'Daily Integral',
     blurb:
-      'Spaced-repetition nudge engine for grinding interview problems without burning out — picks the next problem from your history at the right interval.',
-    stack: 'React · Django · Postgres · AWS',
+      'An integral a day keeps the brain rot away.',
+    stack: 'React · Flask · SymPy · SQLite',
     year: '2025',
-    href: 'https://github.com/ojunedi',
+    href: 'https://dailyintegral-delta.vercel.app',
   },
   {
     index: '02',
-    title: 'Game Analytics Tool',
+    title: 'Concurrent Network File System',
     blurb:
-      'Quiet little pipeline for streaming chess and sports data into tidy frames; surfaces tactical patterns I keep losing to.',
-    stack: 'Python · Pandas · Streamlit',
-    year: '2024',
+      'A multithreaded Unix-style file server in C++ that handles concurrent clients over TCP. Hand-over-hand reader/writer locking on per-inode mutexes lets the tree be walked in parallel without deadlocks or torn writes.',
+    stack: 'C++ · Boost · POSIX Sockets',
+    year: '2025',
     href: 'https://github.com/ojunedi',
   },
   {
@@ -35,7 +35,7 @@ const projects: Project[] = [
       'A from-scratch CPU raytracer with reflection, refraction and soft shadows. Built mostly to feel the math at the keyboard.',
     stack: 'C++',
     year: '2023',
-    href: 'https://github.com/ojunedi',
+    href: 'https://github.com/ojunedi/miniraytracer',
   },
 ]
 
