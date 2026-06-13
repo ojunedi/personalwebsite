@@ -12,6 +12,8 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+.claude/
+.playwright-mcp/
 
 # Logs
 logs
