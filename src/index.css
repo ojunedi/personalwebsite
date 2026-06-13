@@ -94,3 +94,7 @@ a {
   background-size: 0% 1px;
   background-position: 100% 100%;
 }
+
+.post-body p + p {
+  margin-top: 1.4em;
+}

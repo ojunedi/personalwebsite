@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Omer Junedi</title>
+    <script type="text/javascript">
+      // SPA fallback for GitHub Pages.
+      // Rewrites the requested path into a query param so index.html can
+      // restore it on load. Pattern adapted from rafgraph/spa-github-pages.
+      (function () {
+        var l = window.location;
+        l.replace(
+          l.protocol + '//' + l.host + '/?/' +
+            l.pathname.slice(1).replace(/&/g, '~and~') +
+            (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+            l.hash
+        );
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

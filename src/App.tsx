@@ -1,21 +1,25 @@
 import SiteHeader from './sections/SiteHeader'
-import IntroSection from './sections/IntroSection'
-import AboutSection from './sections/AboutSection'
-import ExperienceSection from './sections/ExperienceSection'
-import ProjectsSection from './sections/ProjectsSection'
-import SiteFooter from './sections/SiteFooter'
+import Home from './pages/Home'
+import BlogIndex from './pages/BlogIndex'
+import BlogPost from './pages/BlogPost'
+import { useRoute } from './router'
+
+function renderRoute(path: string) {
+  if (path === '/' || path === '') return <Home />
+  if (path === '/blog' || path === '/blog/') return <BlogIndex />
+  if (path.startsWith('/blog/')) {
+    const slug = path.replace(/^\/blog\//, '').replace(/\/$/, '')
+    return <BlogPost slug={slug} />
+  }
+  return <BlogPost slug="__not_found__" />
+}
 
 export default function App() {
+  const path = useRoute()
   return (
     <div className="min-h-screen text-ink" style={{ background: 'var(--paper)' }}>
       <SiteHeader />
-      <main className="px-6 sm:px-10 md:px-14">
-        <IntroSection />
-        <AboutSection />
-        <ExperienceSection />
-        <ProjectsSection />
-      </main>
-      <SiteFooter />
+      {renderRoute(path)}
     </div>
   )
 }
