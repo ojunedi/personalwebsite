@@ -4,7 +4,7 @@ const NOW = [
   { label: 'Role', value: 'Forward Deployed Engineer at Accenture' },
   { label: 'Based', value: 'Chicago, IL' },
   { label: 'Building', value: 'Agentic systems, ML tooling, internal infra' },
-  { label: 'Reading', value: 'The Master and His Emissary — McGilchrist' },
+  { label: 'Reading', value: 'The Count of Monte Cristo' },
 ]
 
 export default function AboutSection() {
