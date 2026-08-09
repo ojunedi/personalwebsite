@@ -20,8 +20,8 @@ export default function SiteFooter() {
           </p>
         </FadeIn>
 
-        <FadeIn delay={0.1} y={20}>
-          <h2
+        {/*<FadeIn delay={0.1} y={20}>
+        <h2
             className="font-serif font-light leading-[1.05] tracking-[-0.02em] mb-12 md:mb-16"
             style={{ fontSize: 'clamp(2.4rem, 6vw, 4.6rem)' }}
           >
@@ -29,6 +29,7 @@ export default function SiteFooter() {
             <span className="serif-italic">that holds up.</span>
           </h2>
         </FadeIn>
+        */}
 
         <FadeIn delay={0.2} y={16}>
           <ul className="flex flex-col">

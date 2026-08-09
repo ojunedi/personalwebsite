@@ -12,16 +12,16 @@ const experiences: Experience[] = [
   {
     year: '2026 →',
     company: 'Accenture',
-    role: 'Incoming Forward Deployed Engineer',
+    role: 'Forward Deployed Engineer',
     location: 'Chicago, IL',
-    note: 'Embedded with clients to ship AI systems where they actually live.',
+    note: 'Embedding with clients to ship AI systems',
   },
   {
     year: '2025',
     company: 'Cisco',
     role: 'Software Engineering Intern',
     location: 'Research Triangle Park, NC',
-    note: 'Commerce Engineering — agentic AI for cash flow applications.',
+    note: 'Built ocr pipeline for semantic document comparison',
   },
   {
     year: '2024',
