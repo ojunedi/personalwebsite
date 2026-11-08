@@ -12,8 +12,7 @@ export default function AboutSection() {
     <section id="about" className="max-w-[860px] mx-auto py-20 md:py-28 border-t rule">
       <FadeIn y={20}>
         <p
-          className="font-mono-ui uppercase tracking-[0.22em] text-ink-mute mb-10 md:mb-14"
-          style={{ fontSize: '11px' }}
+          className="font-mono-ui uppercase tracking-[0.22em] text-ink-mute mb-10 md:mb-14 text-label"
         >
           §1 — On record
         </p>
@@ -23,8 +22,7 @@ export default function AboutSection() {
         <div className="md:col-span-7">
           <FadeIn delay={0.05} y={20}>
             <h2
-              className="font-serif font-light leading-[1.15] tracking-[-0.01em] text-ink"
-              style={{ fontSize: 'clamp(1.6rem, 2.6vw, 2.15rem)' }}
+              className="font-serif font-light leading-[1.15] tracking-[-0.01em] text-ink text-statement"
             >
               I&apos;m drawn to{' '}
               <span className="serif-italic">hard</span> problems
@@ -34,8 +32,7 @@ export default function AboutSection() {
 
           <FadeIn delay={0.18} y={18}>
             <p
-              className="mt-8 md:mt-10 font-serif text-ink-soft leading-[1.6] max-w-[560px]"
-              style={{ fontSize: 'clamp(1.05rem, 1.4vw, 1.15rem)' }}
+              className="mt-8 md:mt-10 font-serif text-ink-soft leading-[1.6] max-w-[560px] text-body"
             >
               Over the last few years I&apos;ve shipped software across ML,
               full-stack, and systems.
@@ -53,8 +50,7 @@ export default function AboutSection() {
                 style={{ border: '1px solid var(--rule)' }}
               />
               <figcaption
-                className="mt-2 font-mono-ui uppercase tracking-[0.18em] text-ink-mute"
-                style={{ fontSize: '10.5px' }}
+                className="mt-2 font-mono-ui uppercase tracking-[0.18em] text-ink-mute text-label-sm"
               >
                 Fig. 1 — The author
               </figcaption>
@@ -63,8 +59,7 @@ export default function AboutSection() {
 
           <FadeIn delay={0.25} y={16}>
             <p
-              className="font-mono-ui uppercase tracking-[0.22em] text-ink-mute mb-5"
-              style={{ fontSize: '10.5px' }}
+              className="font-mono-ui uppercase tracking-[0.22em] text-ink-mute mb-5 text-label-sm"
             >
               Now
             </p>
@@ -75,14 +70,12 @@ export default function AboutSection() {
                   className={`flex justify-between gap-6 py-2.5 ${i === 0 ? '' : 'border-t rule'}`}
                 >
                   <dt
-                    className="font-mono-ui uppercase tracking-[0.18em] text-ink-mute shrink-0"
-                    style={{ fontSize: '10.5px' }}
+                    className="font-mono-ui uppercase tracking-[0.18em] text-ink-mute shrink-0 text-label-sm"
                   >
                     {row.label}
                   </dt>
                   <dd
-                    className="font-serif text-ink text-right"
-                    style={{ fontSize: '14px', lineHeight: 1.4 }}
+                    className="font-serif text-ink text-right text-small leading-[1.4]"
                   >
                     {row.value}
                   </dd>

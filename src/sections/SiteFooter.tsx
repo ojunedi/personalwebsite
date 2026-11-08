@@ -1,4 +1,5 @@
 import FadeIn from '../components/shared/FadeIn'
+import { posts } from '../data/posts'
 
 const LINKS = [
   { label: 'Email', href: 'mailto:ojunedi@umich.edu', value: 'ojunedi@umich.edu' },
@@ -13,10 +14,9 @@ export default function SiteFooter() {
       <div className="max-w-[860px] mx-auto border-t rule">
         <FadeIn y={20}>
           <p
-            className="font-mono-ui uppercase tracking-[0.22em] text-ink-mute pt-16 md:pt-24 mb-8 md:mb-12"
-            style={{ fontSize: '11px' }}
+            className="font-mono-ui uppercase tracking-[0.22em] text-ink-mute pt-16 md:pt-24 mb-8 md:mb-12 text-label"
           >
-            §4 — Reach
+            §{posts.length > 0 ? 5 : 4} — Reach
           </p>
         </FadeIn>
 
@@ -39,8 +39,7 @@ export default function SiteFooter() {
                 className={`flex items-baseline justify-between gap-6 py-4 ${i === 0 ? 'border-t rule' : 'border-t rule'}`}
               >
                 <span
-                  className="font-mono-ui uppercase tracking-[0.18em] text-ink-mute"
-                  style={{ fontSize: '11px' }}
+                  className="font-mono-ui uppercase tracking-[0.18em] text-ink-mute text-label"
                 >
                   {link.label}
                 </span>
@@ -48,8 +47,7 @@ export default function SiteFooter() {
                   href={link.href}
                   target={link.href.startsWith('http') ? '_blank' : undefined}
                   rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
-                  className="font-serif text-ink link-static-underline hover:text-ink"
-                  style={{ fontSize: 'clamp(1rem, 1.5vw, 1.2rem)' }}
+                  className="font-serif text-ink link-static-underline hover:text-ink text-link"
                 >
                   {link.value}
                 </a>
@@ -61,8 +59,7 @@ export default function SiteFooter() {
 
         <FadeIn delay={0.3} y={10}>
           <div
-            className="mt-16 md:mt-24 flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 font-mono-ui uppercase tracking-[0.18em] text-ink-mute"
-            style={{ fontSize: '10.5px' }}
+            className="mt-16 md:mt-24 flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 font-mono-ui uppercase tracking-[0.18em] text-ink-mute text-label-sm"
           >
             <span>
               © 2026&nbsp;&nbsp;·&nbsp;&nbsp;Set in Newsreader &amp; JetBrains Mono

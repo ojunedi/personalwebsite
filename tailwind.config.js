@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+// All values live in src/index.css (SITE SETTINGS). Change them there, not here.
+const size = (name) => `var(--size-${name})`
+
 export default {
   content: [
     "./index.html",
@@ -7,16 +10,24 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Newsreader', 'Georgia', 'serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        serif: 'var(--font-serif)',
+        mono: 'var(--font-mono)',
       },
       colors: {
-        paper: '#FFFFFF',
-        ink: '#0A0A0A',
-        'ink-soft': '#555555',
-        'ink-mute': '#999999',
-        rule: '#E5E5E5',
+        paper: 'var(--paper)',
+        ink: 'var(--ink)',
+        'ink-soft': 'var(--ink-soft)',
+        'ink-mute': 'var(--ink-mute)',
+        rule: 'var(--rule)',
       },
+      // Use as className="text-display", "text-label", etc.
+      fontSize: Object.fromEntries(
+        [
+          'display', 'post-title', 'project-title', 'statement', 'entry-title',
+          'lede', 'body', 'entry-body', 'post-body', 'link', 'small',
+          'label-lg', 'label', 'label-sm',
+        ].map((n) => [n, size(n)]),
+      ),
     },
   },
   plugins: [],

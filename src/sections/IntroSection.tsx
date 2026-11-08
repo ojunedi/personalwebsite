@@ -5,8 +5,7 @@ export default function IntroSection() {
     <section id="top" className="max-w-[860px] mx-auto pt-24 sm:pt-32 md:pt-40 pb-24 sm:pb-32">
       <FadeIn y={20} duration={0.9}>
         <p
-          className="font-mono-ui uppercase tracking-[0.22em] text-ink-mute mb-12 md:mb-16 flex items-center gap-3"
-          style={{ fontSize: '11px' }}
+          className="font-mono-ui uppercase tracking-[0.22em] text-ink-mute mb-12 md:mb-16 flex items-center gap-3 text-label"
         >
           <span
             className="inline-block"
@@ -18,8 +17,7 @@ export default function IntroSection() {
 
       <FadeIn delay={0.1} y={24} duration={1}>
         <h1
-          className="font-serif leading-[1.02] tracking-[-0.02em]"
-          style={{ fontSize: 'clamp(2.5rem, 7.2vw, 5.4rem)' }}
+          className="font-serif leading-[1.02] tracking-[-0.02em] text-display"
         >
           <span className="serif-italic font-light">Omer Junedi</span>
         </h1>
@@ -27,8 +25,7 @@ export default function IntroSection() {
 
       <FadeIn delay={0.25} y={18} duration={1}>
         <p
-          className="mt-12 md:mt-16 max-w-[560px] font-serif text-ink-soft leading-[1.55]"
-          style={{ fontSize: 'clamp(1.05rem, 1.45vw, 1.2rem)' }}
+          className="mt-12 md:mt-16 max-w-[560px] font-serif text-ink-soft leading-[1.55] text-lede"
         >
         I recently graduated from the university of michigan where I double majored in
         mathematics and computer science
@@ -43,8 +40,7 @@ export default function IntroSection() {
 
       <FadeIn delay={0.4} y={14} duration={0.9}>
         <div
-          className="mt-10 md:mt-12 flex flex-wrap items-center gap-x-6 gap-y-3 font-mono-ui uppercase tracking-[0.18em] text-ink-soft"
-          style={{ fontSize: '11px' }}
+          className="mt-10 md:mt-12 flex flex-wrap items-center gap-x-6 gap-y-3 font-mono-ui uppercase tracking-[0.18em] text-ink-soft text-label"
         >
           <a
             href="mailto:ojunedi@umich.edu"

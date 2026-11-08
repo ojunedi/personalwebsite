@@ -2,12 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==========================================================================
+   SITE SETTINGS — just change the numbers.
+   Sizes are in pixels, as they look on a laptop/desktop screen.
+   (On phones the big ones shrink automatically — you don't have to do anything.)
+   ========================================================================== */
 :root {
-  --paper: #ffffff;
-  --ink: #0a0a0a;
-  --ink-soft: #555555;
-  --ink-mute: #999999;
-  --rule: #e5e5e5;
+  /* ---- Headings */
+  --name-size: 86;           /* your name at the top of the page */
+  --post-title-size: 61;     /* title on a blog post page */
+  --project-title-size: 42;  /* project names */
+  --about-heading-size: 34;  /* "I'm drawn to hard problems…" */
+  --list-title-size: 32;     /* job titles + post titles in lists */
+
+  /* ---- Paragraphs */
+  --intro-text-size: 19;     /* sentence under your name */
+  --about-text-size: 18;     /* paragraph in About */
+  --list-text-size: 17;      /* job / project / post descriptions */
+  --post-text-size: 19;      /* the writing inside a blog post */
+  --footer-link-size: 19;    /* email / github / linkedin in footer */
+  --now-table-size: 14;      /* values in the "Now" table */
+
+  /* ---- Small uppercase labels */
+  --date-size: 11.5;         /* dates next to jobs / projects / posts */
+  --label-size: 11;          /* nav, "§1 — On record", most labels */
+  --small-label-size: 10.5;  /* tech stacks, photo caption, footer line */
+
+  /* ---- Colors */
+  --paper: #ffffff;          /* background */
+  --ink: #0a0a0a;            /* main text */
+  --ink-soft: #555555;       /* paragraphs */
+  --ink-mute: #999999;       /* labels, dates */
+  --rule: #e5e5e5;           /* divider lines */
+
+  /* ---- Code block colors (blog posts) */
+  --code-background: #f7f7f7; /* box behind code blocks */
+  --code-text: #24292f;       /* anything not listed below */
+  --code-keyword: #8b3a8f;    /* def, for, if, return, class… */
+  --code-string: #2d6a4f;     /* "text in quotes" */
+  --code-number: #b4532a;     /* 42, True, None, null */
+  --code-function: #1f5a99;   /* function and class names */
+  --code-type: #8a6514;       /* int, str, std::vector, built-ins */
+  --code-comment: #8a8a8a;    /* # comments and // comments */
+
+  /* ---- Fonts (if you change these, also update the Google Fonts link in index.html) */
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* ==========================================================================
+   Behind the scenes — no need to edit below this line.
+   Turns the numbers above into sizes that shrink smoothly on smaller screens:
+   full size at 1280px+ wide, never smaller than (number x floor) on phones.
+   ========================================================================== */
+:root {
+  --fluid-at: 1280;
+  --size-display:       clamp(calc(var(--name-size) * 0.47px),          calc(var(--name-size) * 100vw / var(--fluid-at)),          calc(var(--name-size) * 1px));
+  --size-post-title:    clamp(calc(var(--post-title-size) * 0.58px),    calc(var(--post-title-size) * 100vw / var(--fluid-at)),    calc(var(--post-title-size) * 1px));
+  --size-project-title: clamp(calc(var(--project-title-size) * 0.65px), calc(var(--project-title-size) * 100vw / var(--fluid-at)), calc(var(--project-title-size) * 1px));
+  --size-statement:     clamp(calc(var(--about-heading-size) * 0.75px), calc(var(--about-heading-size) * 100vw / var(--fluid-at)), calc(var(--about-heading-size) * 1px));
+  --size-entry-title:   clamp(calc(var(--list-title-size) * 0.75px),    calc(var(--list-title-size) * 100vw / var(--fluid-at)),    calc(var(--list-title-size) * 1px));
+  --size-lede:          clamp(calc(var(--intro-text-size) * 0.88px),    calc(var(--intro-text-size) * 100vw / var(--fluid-at)),    calc(var(--intro-text-size) * 1px));
+  --size-body:          clamp(calc(var(--about-text-size) * 0.9px),     calc(var(--about-text-size) * 100vw / var(--fluid-at)),     calc(var(--about-text-size) * 1px));
+  --size-entry-body:    clamp(calc(var(--list-text-size) * 0.93px),     calc(var(--list-text-size) * 100vw / var(--fluid-at)),     calc(var(--list-text-size) * 1px));
+  --size-post-body:     clamp(calc(var(--post-text-size) * 0.9px),      calc(var(--post-text-size) * 100vw / var(--fluid-at)),      calc(var(--post-text-size) * 1px));
+  --size-link:          clamp(calc(var(--footer-link-size) * 0.84px),   calc(var(--footer-link-size) * 100vw / var(--fluid-at)),   calc(var(--footer-link-size) * 1px));
+  --size-small:    calc(var(--now-table-size) * 1px);
+  --size-label-lg: calc(var(--date-size) * 1px);
+  --size-label:    calc(var(--label-size) * 1px);
+  --size-label-sm: calc(var(--small-label-size) * 1px);
 }
 
 *,
@@ -23,7 +86,7 @@ body,
 #root {
   background-color: var(--paper);
   color: var(--ink);
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: var(--font-serif);
   font-weight: 400;
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
@@ -42,7 +105,7 @@ a {
 }
 
 .font-mono-ui {
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-family: var(--font-mono);
   font-feature-settings: 'ss01', 'ss02';
 }
 
@@ -52,16 +115,6 @@ a {
 
 .rule {
   border-color: var(--rule);
-}
-
-.text-ink {
-  color: var(--ink);
-}
-.text-ink-soft {
-  color: var(--ink-soft);
-}
-.text-ink-mute {
-  color: var(--ink-mute);
 }
 
 @keyframes blink {
@@ -94,3 +147,68 @@ a {
   background-size: 0% 1px;
   background-position: 100% 100%;
 }
+
+/* ---------- Post body (rendered from Markdown in src/posts) ---------- */
+.post-body {
+  font-family: var(--font-serif);
+  font-size: var(--size-post-body);
+  line-height: 1.7;
+  color: var(--ink);
+}
+.post-body > * + * { margin-top: 1.4em; }
+.post-body h2,
+.post-body h3 {
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-top: 2.2em;
+}
+.post-body h2 { font-size: 1.7em; }
+.post-body h3 { font-size: 1.3em; font-style: italic; }
+.post-body a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
+.post-body a:hover { color: var(--ink-soft); }
+.post-body ul,
+.post-body ol { padding-left: 1.4em; }
+.post-body ul { list-style: disc; }
+.post-body ol { list-style: decimal; }
+.post-body li + li { margin-top: 0.4em; }
+.post-body li::marker { color: var(--ink-mute); }
+.post-body blockquote {
+  border-left: 1px solid var(--ink);
+  padding-left: 1.2em;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+.post-body code {
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  background: var(--code-background);
+  padding: 0.12em 0.35em;
+}
+.post-body pre {
+  background: var(--code-background);
+  color: var(--code-text);
+  border: 1px solid var(--rule);
+  padding: 1.1em 1.2em;
+  overflow-x: auto;
+  line-height: 1.55;
+}
+.post-body pre code { background: none; padding: 0; font-size: 0.78em; }
+.post-body hr { border: 0; border-top: 1px solid var(--rule); margin: 2.6em 0; }
+.post-body img { max-width: 100%; height: auto; border: 1px solid var(--rule); }
+.post-body strong { font-weight: 600; }
+
+/* ---------- Syntax highlighting (colors set in SITE SETTINGS) ---------- */
+.hljs-keyword, .hljs-selector-tag, .hljs-meta .hljs-keyword, .hljs-doctag { color: var(--code-keyword); }
+.hljs-string, .hljs-regexp, .hljs-attr, .hljs-template-tag, .hljs-symbol { color: var(--code-string); }
+.hljs-number, .hljs-literal, .hljs-variable.constant_ { color: var(--code-number); }
+.hljs-title, .hljs-title.function_, .hljs-title.class_, .hljs-section, .hljs-name { color: var(--code-function); }
+.hljs-type, .hljs-built_in, .hljs-params .hljs-type, .hljs-meta, .hljs-selector-class { color: var(--code-type); }
+.hljs-comment, .hljs-quote { color: var(--code-comment); font-style: italic; }
+.hljs-emphasis { font-style: italic; }
+.hljs-strong { font-weight: 600; }

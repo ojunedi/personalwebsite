@@ -44,8 +44,7 @@ export default function ExperienceSection() {
     <section id="work" className="max-w-[860px] mx-auto py-20 md:py-28 border-t rule">
       <FadeIn y={20}>
         <p
-          className="font-mono-ui uppercase tracking-[0.22em] text-ink-mute mb-12 md:mb-16"
-          style={{ fontSize: '11px' }}
+          className="font-mono-ui uppercase tracking-[0.22em] text-ink-mute mb-12 md:mb-16 text-label"
         >
           §2 — Work, in order
         </p>
@@ -57,16 +56,14 @@ export default function ExperienceSection() {
             <li className="group grid grid-cols-12 gap-x-6 md:gap-x-10 py-8 md:py-10 border-t rule">
               <div className="col-span-12 md:col-span-3">
                 <span
-                  className="font-mono-ui uppercase tracking-[0.18em] text-ink-mute group-hover:text-ink transition-colors"
-                  style={{ fontSize: '11.5px' }}
+                  className="font-mono-ui uppercase tracking-[0.18em] text-ink-mute group-hover:text-ink transition-colors text-label-lg"
                 >
                   {exp.year}
                 </span>
               </div>
               <div className="col-span-12 md:col-span-9 mt-2 md:mt-0">
                 <h3
-                  className="font-serif leading-[1.1] tracking-[-0.01em] text-ink"
-                  style={{ fontSize: 'clamp(1.5rem, 2.6vw, 2rem)' }}
+                  className="font-serif leading-[1.1] tracking-[-0.01em] text-ink text-entry-title"
                 >
                   <span className="font-light">{exp.company}</span>{' '}
                   <span className="serif-italic font-light text-ink-soft">
@@ -74,15 +71,13 @@ export default function ExperienceSection() {
                   </span>
                 </h3>
                 <p
-                  className="mt-2 font-mono-ui uppercase tracking-[0.18em] text-ink-mute"
-                  style={{ fontSize: '11px' }}
+                  className="mt-2 font-mono-ui uppercase tracking-[0.18em] text-ink-mute text-label"
                 >
                   {exp.location}
                 </p>
                 {exp.note && (
                   <p
-                    className="mt-4 font-serif text-ink-soft leading-[1.55] max-w-[540px]"
-                    style={{ fontSize: 'clamp(1rem, 1.3vw, 1.075rem)' }}
+                    className="mt-4 font-serif text-ink-soft leading-[1.55] max-w-[540px] text-entry-body"
                   >
                     {exp.note}
                   </p>
